@@ -1,4 +1,9 @@
 # CLT user interface
+library(mosaic)
+colleges <- read_csv(file = 'https://raw.githubusercontent.com/gitcnk/Data/master/colleges2016.csv')
+
+mydata <- select_if(colleges, is.numeric)
+nsim <- 1E4
 
 
 ui <- fluidPage(
