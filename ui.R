@@ -1,5 +1,9 @@
 # CLT user interface
 
+library(tidyverse)
+colleges <- read_csv(file = 'https://raw.githubusercontent.com/gitcnk/Data/master/colleges2016.csv')
+
+mydata <- select_if(colleges, is.numeric)
 
 
 ui <- fluidPage(
