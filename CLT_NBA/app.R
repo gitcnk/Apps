@@ -12,7 +12,7 @@ ui <- fluidPage(
   
   sidebarPanel(width = 3,
                
-               h5(a('This dataset is from ESPN.')), # Level (size) 5 heading
+               h4(a('Data Source: ESPN')), # Level (size) 5 heading
                
                
                helpText('The app will take 10,000 samples 
