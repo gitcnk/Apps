@@ -62,9 +62,9 @@ ui <- fluidPage(
   
   
   mainPanel(
-    fluidRow(plotOutput("Pop", width = '600px', height = '300px' )),
+    fluidRow(plotOutput("Pop", width = '650px', height = '300px' )),
     
-    fluidRow(plotOutput('SamDist',width = '600px', height = '330px'))
+    fluidRow(plotOutput('SamDist',width = '650px', height = '330px'))
   )
 )
 
