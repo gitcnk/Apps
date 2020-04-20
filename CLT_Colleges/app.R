@@ -120,22 +120,14 @@ server <- function(input, output)
   
   
   output$SamDist<- renderPlot({
-    
-    
-    #mysamples <- matrix( 0, nrow = nsim, ncol = input$n)
-    #mysamples <- do(nsim)*sample(mydata[[input$variable]], size = input$n)
-    #mymeans <- apply(mysamples, MARGIN = 1, FUN = mean)
-    
-    #SampDist_center <- mean(mymeans)
-    #SampDist_SD <- sd(mymeans)
-    
+     
     ggplot(SamDist_data()) +
       aes( x = mymeans) +
       geom_histogram(bins = 40) +
       labs(title = 'Sampling Distribution of the Sample Mean',
            subtitle = '',
-           x = 'sample mean') +
-      geom_vline(xintercept = pop_mean(), col = 'red', linetype = 'dashed')
+           x = 'sample mean') #+
+      #geom_vline(xintercept = pop_mean(), col = 'red', linetype = 'dashed')
   })
   #  }
   
