@@ -156,10 +156,7 @@ server <- function(input, output)
       geom_histogram(bins = 40) +
       labs(title = 'Bootstrap Sampling Distribution of the Sample Mean',
            subtitle = '',
-           x = 'bootstrap sample mean') +
-      geom_vline(xintercept = pop_mean, col = 'red', linetype = 'dashed')
-  })
-  #  }
+           x = 'bootstrap sample mean')  })
   
   
 }
