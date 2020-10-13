@@ -51,7 +51,9 @@ ui <- fluidPage(
                br(),
                
                textOutput(outputId = 'SamDist_center'),
-               textOutput(outputId = 'SamDist_SD')
+               textOutput(outputId = 'SamDist_SD'),
+               
+               textOutput(outputId = 'Symmetry')
                
                
                
@@ -104,6 +106,12 @@ server <- function(input, output)
     temp <- SamDist_data()
     paste('Std. Dev. of the sampling distribution ', 
           round(sd(temp$mymeans),2), sep = '= ')}
+  )
+  
+  output$Symmetry <- renderText({
+    temp <- SamDist_data()
+    paste('% left of mean ', 
+          mean(temp$mymeans < pop_mean()), sep = '= ')}
   )
   
   
