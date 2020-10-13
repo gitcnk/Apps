@@ -14,6 +14,7 @@ ui <- fluidPage(
                
                h4(a('Data Source: ESPN')), # Level (size) 5 heading
                
+               h4(a("Kobe Bryant's last season")),
                
                helpText('The app will take 10,000 samples 
                        and produce the sampling distribution' ),
