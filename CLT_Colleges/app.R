@@ -126,10 +126,10 @@ server <- function(input, output)
       geom_histogram(bins = 40) +
       labs(title = 'Sampling Distribution of the Sample Mean',
            subtitle = '',
-           x = 'sample mean') +
-      geom_vline(xintercept = pop_mean(), col = 'red', linetype = 'dashed')
+           x = 'sample mean') # +
+      #geom_vline(xintercept = pop_mean(), col = 'red', linetype = 'dashed')
   })
-  #  }
+   # }
   
   
 }
