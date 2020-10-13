@@ -16,7 +16,7 @@ ui <- fluidPage(
                
                
                helpText('The app will take 10,000 samples 
-                       and produce the sampling distribution' ),
+                       and produce a sampling distribution' ),
                
                br(),
                
@@ -102,7 +102,7 @@ server <- function(input, output)
   
   output$SamDist_SD <- renderText({
     temp <- SamDist_data()
-    paste('Spread of the sampling distribution ', 
+    paste('Std. Dev. of the sampling distribution ', 
           round(sd(temp$mymeans),2), sep = '= ')}
   )
   
@@ -127,7 +127,7 @@ server <- function(input, output)
       labs(title = 'Sampling Distribution of the Sample Mean',
            subtitle = '',
            x = 'sample mean') #+
-      #geom_vline(xintercept = pop_mean(), col = 'red', linetype = 'dashed')
+      geom_vline(xintercept = pop_mean(), col = 'red', linetype = 'dashed')
   })
   #  }
   
